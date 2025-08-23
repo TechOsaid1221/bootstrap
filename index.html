@@ -7,6 +7,7 @@
   <title>Online Store</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
 }
 
 .hoverlink:hover {
-    color: #dfe6e3; /* A common darker blue for hover */
+    color: #2bc07f; /* A common darker blue for hover */
     text-decoration: underline;
 }
 .hov2:hover{
@@ -29,6 +30,16 @@
 .my-custom-bg {
     background-color: #f6f8f0;
 }
+.card-hover:hover {
+  transform: translateY(-10px); /* Moves the card up by 10 pixels */
+}
+
+/* Optional: Add a transition for a smooth animation */
+.card-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+
 </style>
 
 <body>
@@ -72,16 +83,11 @@
         </ul>
         <!-- Account and Cart Icons -->
         <div class="d-flex align-items-center gap-3">
-          <a href="#" class="text-white" title="Account">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-              <path d="M11 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
-              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0 0 14A7 7 0 0 0 8 1z"/>
-            </svg>
+          <a href="#" class="text-white mx-2" title="Account">
+            <i class="bi bi-box-arrow-in-right"></i>
           </a>
-          <a href="#" class="text-white position-relative" title="Cart">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-              <path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 14H4a.5.5 0 0 1-.491-.408L1.01 2H.5a.5.5 0 0 1-.5-.5zM3.14 6l1.25 6h8.22l1.25-6H3.14zM5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6 1a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-            </svg>
+          <a href="#" class="text-white mx-2" title="Cart">
+            <i class="bi bi-cart-dash-fill"></i>
           </a>
         </div>
       </div>
@@ -191,24 +197,24 @@
   font-style: normal;">Featured Products </p>
 
   <!--Items 2 Start-->
-  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4 mx-auto container-md">
+  <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-4 mx-auto container-md">
     <div class="col">
-      <div class="card shadow">
+      <div class="card shadow card-hover">
         <img src="images/cardimg.webp" class="card-img-top" alt="..." height="160px">
         <div class="card-body">
           <h5 class="card-title">Earbuds</h5>
-                    <p class="card-text text-success"><strong>Rs 1500/-</strong></p>
-
-           <ul>
-              <li> Bluetooth 5.0</li>
-              <li> 700 Mah Battery</li>
-              <li> Custom Storage</li>
-           </ul>
+          <p class="card-text text-success"><strong>Rs 1500/-</strong></p>
+          <ul>
+            <li> Bluetooth 5.0</li>
+            <li> 700 Mah Battery</li>
+            <li> Custom Storage</li>
+          </ul>
+          <a href="#" class="btn btn-outline-success mt-2">Buy Now</a>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card shadow">
+      <div class="card shadow card-hover">
         <img src="images/cardimg2.webp" class="card-img-top" alt="..." height="160px">
         <div class="card-body">
           <h5 class="card-title">Headphones</h5>
@@ -218,11 +224,12 @@
               <li> Bass Sound</li>
               <li> Noise Cancelation</li>
            </ul>
+           <a href="#" class="btn btn-outline-success mt-2">Buy Now</a>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card shadow">
+      <div class="card shadow card-hover">
         <img src="images/cardimg3.webp" class="card-img-top" alt="..." height="160px">
         <div class="card-body">
           <h5 class="card-title">Power Banks</h5>
@@ -232,20 +239,22 @@
               <li> 10000 MAH Battery</li>
               <li> Blast Proof</li>
            </ul>
+           <a href="#" class="btn btn-outline-success mt-2">Buy Now</a>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card shadow">
+      <div class="card shadow card-hover">
         <img src="images/cardimg4.webp" class="card-img-top" alt="..." height="160px">
         <div class="card-body">
-          <h5 class="card-title">Type-C Cables</h5>
+          <h5 class="card-title">Type-C Cables <span class="badge bg-success text-white"> 50% Off</span> </h5>
                     <p class="card-text text-success"><strong>Rs 500/-</strong></p>
           <ul>
               <li> Breaded Cable</li>
               <li> 12v 5A Cable</li>
               <li> Type-C</li>
            </ul>
+           <a href="#" class="btn btn-outline-success mt-2">Buy Now</a>
         </div>
       </div>
     </div>
@@ -351,7 +360,46 @@
       <p class="text-center text-white">© 2025 Gadgets Mania Inc</p>
     </footer>
   </div>
+  <!--Footer End-->
 
+  <!--Footer bottom Start-->
+     
+  <div class="d-none d-md-block container-fluid bg-dark text-white py-3">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <span class="mb-2 mb-md-0">
+        © 2025 <a href="/" class="text-success text-decoration-none fw-bold" title="">Gadgets Mania</a> - All Rights Reserved
+      </span>
+      <ul class="list-unstyled d-flex align-items-center mb-0 gap-2">
+        <li class="payment__icon">
+          <img src="https://cdn.shopify.com/s/files/1/0695/8832/0569/files/Payment_partner_logo-04.png" alt="Visa" width="40" height="40" class="rounded bg-white p-1 shadow-sm">
+        </li>
+        <li class="payment__icon">
+          <img src="https://cdn.shopify.com/s/files/1/0695/8832/0569/files/Payment_partner_logo-03.png" alt="Mastercard" width="40" height="40" class="rounded bg-white p-1 shadow-sm">
+        </li>
+        <li class="payment__icon">
+          <img src="https://cdn.shopify.com/s/files/1/0695/8832/0569/files/Payment_partner_logo-02.png" alt="Union Pay" width="40" height="40" class="rounded bg-white p-1 shadow-sm">
+        </li>
+        <li class="payment__icon">
+          <img src="https://cdn.shopify.com/s/files/1/0695/8832/0569/files/Payment_partner_logo-01.png" alt="PayPak" width="40" height="40" class="rounded bg-white p-1 shadow-sm">
+        </li>
+        <li class="payment__icon">
+          <img src="https://cdn.shopify.com/s/files/1/0695/8832/0569/files/Payment_partner_logo-05.png" alt="Raast" width="40" height="40" class="rounded bg-white p-1 shadow-sm">
+        </li>
+        <li class="payment__icon">
+          <img src="https://cdn.shopify.com/s/files/1/0695/8832/0569/files/Payment_partner_logo-07.png" alt="Mastercard" width="40" height="40" class="rounded bg-white p-1 shadow-sm">
+        </li>
+        <li class="payment__icon">
+          <img src="https://cdn.shopify.com/s/files/1/0695/8832/0569/files/Payment_partner_logo-08.png" alt="JazzCash" width="40" height="40" class="rounded bg-white p-1 shadow-sm">
+        </li>
+        <li class="payment__icon">
+          <img src="https://cdn.shopify.com/s/files/1/0695/8832/0569/files/Payment_partner_logo-06.png" alt="Upaisa" width="40" height="40" class="rounded bg-white p-1 shadow-sm">
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!--Footer Bottom End-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
